@@ -1,0 +1,27 @@
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  background-color: #fff !important;
+}
+
+.dark-sidebar .main-sidebar .sidebar-brand {
+  background-color: $color-white;
+}
+.dark-sidebar .main-sidebar {
+  background-color: $color-white;
+  border-radius: 0px 46px 46px 0px;
+  z-index: 100000;
+}
+.navbar {
+  background-color: #f4fbf7;
+}
+
+.main-content {
+  background-color: #f4fbf7;
+}

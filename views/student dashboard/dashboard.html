@@ -1,0 +1,441 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      content="width=device-width, initial-scale=1, maximum-scale=1, shrink-to-fit=no"
+      name="viewport"
+    />
+    <title>Dashboard | CesPess</title>
+    <!-- General CSS Files -->
+    <link rel="stylesheet" href="../../assets/css/app.min.css" />
+     <link
+      rel="stylesheet"
+      href="../../assets/bundles/izitoast/css/iziToast.min.css"
+    />
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="../../assets/css/style.css" />
+    <link rel="stylesheet" href="../../assets/css/components.css" />
+    <!-- Font References-->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" />
+
+   <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom style CSS -->
+    <link rel="stylesheet" href="../../assets/css/custom.css" />
+    <link rel="stylesheet" href="../../assets/css/main.min.css" />
+
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="../../assets/image/global/logo.svg"
+    />
+  </head>
+
+  <body>
+    <div class="loader"></div>
+    <div id="app">
+      <div class="main-wrapper main-wrapper-1">
+        <div class="navbar-bg"></div>
+        <nav
+          class="navbar navbar-expand-lg main-navbar"
+          
+        >
+          <div class="form-inline mr-auto">
+            
+            <ul class="navbar-nav mr-3">  
+              <li>
+                <a
+                  href="#"
+                  data-toggle="sidebar"
+                  class="nav-link nav-link-lg collapse-btn"
+                  ><i class="fas fa-align-left"></i
+                ></a>
+              </li>
+            </ul>
+            <h6 class="heading__primary--h6 mt-2">Dashboard</h6>
+          </div>
+          
+          <ul class="navbar-nav navbar-right">
+            <li class="dropdown dropdown-list-toggle mt-2">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="nav-link notification-toggle nav-link-lg beep"
+                ><i class="far fa-bell"></i
+              ></a>
+            </li>
+            <li class="dropdown mt-2">
+              <a
+                href="#"
+                data-toggle="dropdown"
+                class="nav-link dropdown-toggle nav-link-lg nav-link-user"
+              >
+               <img src="../../assets/image/global/profile pics.jpg" alt="" class="user__profile-img">
+            
+                <i class="fas fa-angle-down font-11"></i>
+                <span class="d-sm-none d-lg-inline-block"></span>
+              </a>
+              <div class="dropdown-menu dropdown-menu-right">
+                <p class="font-weight-600 dropdown-item main_font font-14">Njoku David</p>
+                <a href="profile.html" class="dropdown-item has-icon font-weight-500 font-14">
+                  <i class="fas fa-user"></i> Profile
+                </a>
+                <a href="change-password.html" class="dropdown-item has-icon font-weight-500 font-14">
+                  <i class="fas fa-user-lock"></i> Change Password
+                </a>
+                <a href="#" id="coming__soon" class="dropdown-item has-icon font-weight-500 font-14">
+                  <i class="fas fa-cog"></i>Settings
+                </a>
+                <div class="dropdown-divider"></div>
+                <a
+                  href="#"
+                  class="dropdown-item has-icon font-weight-500 font-14"
+                >
+                  <i class="fas fa-sign-out-alt"></i> Sign out
+                </a>
+              </div>
+            </li>
+          </ul>
+           
+        </nav>
+        <div class="main-sidebar sidebar-style-2">
+          <aside id="sidebar-wrapper">
+            <div class="sidebar-brand ">
+              <a href="#">
+                <img
+                  alt="image"
+                  src="../../assets/image/global/logo.svg"
+                  class="header-logo mt-4"
+                 
+                />
+              </a>
+            </div>
+            <ul class="sidebar-menu mt-5 mb-5">
+              <li class="active">
+                <a class="nav-link" href="dashboard.html"
+                  ><i class="fas fa-qrcode"></i><span>Dashboard</span></a
+                >
+              </li>
+              <li class="mt-3">
+                <a class="nav-link" href="courses.html"
+                  ><i class="material-icons">import_contacts</i
+                  ><span>Courses</span></a
+                >
+              </li>
+              <li class="mt-3">
+                <a class="nav-link" id="coming__soon" href="#"
+                  ><i class="far fa-comment"></i><span>Complaints</span></a
+                >
+              </li>
+              <li class="mt-3">
+                <a class="nav-link" id="coming__soon" href="#"
+                  ><i class="fa fa-graduation-cap"></i><span>Certificates</span></a
+                >
+              </li>  
+            </ul>
+            <ul class="sidebar-menu" style="margin-top:17vh">
+                <li >
+                <a class="nav-link awesome" href="#"
+                  ><i class="material-icons">settings</i
+                  ><span>Settings</span></a
+                >
+                </li>
+                <li >
+                <a class="nav-link awesome" href="#"
+                  ><i class="fas fa-sign-out-alt"></i><span>Logout</span></a
+                >
+                </li>
+            </ul>
+          </aside>
+        </div>
+        <!-- Main Content -->
+        <div class="main-content vhdm">
+          <section class="section">
+            <div class="section-body">
+              <!-- add content here -->
+              <div class="row">
+                <div class="col-lg-8 col-md-12">
+
+                 <!-- Student Welcome Box Start -->
+                  <div class="row">
+                    <div class="col-12">
+                        <div class="welcome">
+                           <div class="welcome__box">
+                              <div class="welcome__heading"> Welcome back, David</div>
+                              <h4 class="welcome__sub-heading">Earn a Certificate. Start your learning today.</h4>
+                              <button class="btn btn-main btn-main-welcome mt-3 mb-2">Continue</button>
+                            </div>
+                            <img src="../../assets/image/user-dashboard/welcome pics.png" alt="" class="welcome__img">
+                        </div>
+                    </div>
+                  </div>
+                <!-- Student Welcome Box Ends -->
+
+                  <!-- Student Course Features Start -->
+                  <div class="row mt-4">
+                    <div class="col-md-4 pr-0 mt-2">
+                        <div class="features">
+                            <div class="features__img-box">
+                                <img src="../../assets/image/user-dashboard/book.svg" alt="" class="features__img">
+                            </div>
+                            <div class="features__text-box">
+                                <h4 class="features__heading">EDUCATION</h4>
+                                <h4 class="features__sub-heading">Environmental</h4>
+                            </div> 
+                        </div>
+                    </div>
+                    <div class="col-md-4 pr-0 mt-2">
+                        <div class="features">
+                            <div class="features__img-box">
+                                <img src="../../assets/image/user-dashboard/course-module graph.svg" alt="" class="features__img">
+                            </div>
+                            <div class="features__text-box">
+                                <h4 class="features__heading">COURSE</h4>
+                                <h4 class="features__sub-heading">Module FIve</h4>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 pr-md-3 pr-0 mt-2">
+                        <div class="features">
+                            <div class="features__img-box">
+                                <img src="../../assets/image/user-dashboard/course-instructor icon.svg" alt="" class="features__img">
+                            </div>
+                            <div class="features__text-box">
+                                <h4 class="features__heading">INSTRUCTOR</h4>
+                                <h4 class="features__sub-heading">Prof Jude</h4>
+                            </div>
+                        </div>
+                    </div>
+                 
+                  </div>
+                <!-- Student Course Features Ends -->
+
+                 <!-- Student Course Module Table Starts -->
+                 <div class="course__table mr-0 mt-4 mb-5">
+                    <div class="course__header">
+                        <h4 class="course__heading">Course Progression</h4>
+                        <div class="course__filter">
+                            <h6 class="course__filter-text course__filter-text--active">All</h6>
+                            <h6 class="course__filter-text">Ongoing</h6>
+                            <h6 class="course__filter-text">Completed</h6>
+                        </div>
+                    </div>
+                    <!-- Course Module without Any Data Starts -->
+                    <div class="course__nodata d-flex justify-content-center align-items-center flex-column mt-3">
+                        <img src="../../assets/image/user-dashboard/course img.svg" class="course__nodata-img">
+                        <p class="course__nodata-text">No Available Course</p>
+                    </div>
+                    <!-- Course Module without Any Data Ends -->
+
+                    <!-- Student Course Module Body Data Starts .g-hidden class hides it -->
+                    <div class="course__body square scrollbar-dusty-grass square thin g-hidden">
+                    <table class="mt-1 w-100">
+                        <tr>
+                         <td class="course__data-card mt-2">
+                            <img src="../../assets/image/user-dashboard/lightbulb.svg" alt="" class="course__data-icon">
+                            <div class="course__text-box">
+                                <h4 class="course__text--heading" id="course-title">Module 1: Understanding Environmental assesment</h4>
+                                <h6 class="course__text--sub-heading">Evironmental Standards</h6>
+                            </div>
+                            <div class="course__rating d-flex align-items-center">
+                                <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                 <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                  <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                <p class="course__rating-text">4.3</p>
+                            </div>
+                            <div class="course__status">Completed</div>
+                         </td> 
+                         <td class="course__data-card mt-2">
+                            <img src="../../assets/image/user-dashboard/lightbulb.svg" alt="" class="course__data-icon">
+                            <div class="course__text-box">
+                                <h4 class="course__text--heading" id="course-title">Module 2: Policy, Legal and Regulatory Framework for Environmental management.</h4>
+                                <h6 class="course__text--sub-heading">Evironmental Standards</h6>
+                            </div>
+                            <div class="course__rating d-flex align-items-center">
+                                <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                 <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                  <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                <p class="course__rating-text">4.3</p>
+                            </div>
+                            <div class="course__status">Completed</div>
+                         </td> 
+                         <td class="course__data-card mt-2">
+                            <img src="../../assets/image/user-dashboard/lightbulb.svg" alt="" class="course__data-icon">
+                            <div class="course__text-box">
+                                <h4 class="course__text--heading" id="course-title">Module 3: The Safeguard Policy of World Bank </h4>
+                                <h6 class="course__text--sub-heading">Evironmental Standards</h6>
+                            </div>
+                            <div class="course__rating d-flex align-items-center">
+                                <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                 <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                  <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                <p class="course__rating-text">4.8</p>
+                            </div>
+                            <div class="course__status">Ongoing</div>
+                         </td> 
+                         <td class="course__data-card mt-2">
+                            <img src="../../assets/image/user-dashboard/lightbulb.svg" alt="" class="course__data-icon">
+                            <div class="course__text-box">
+                                <h4 class="course__text--heading" id="course-title">Module 4: Process for World Bank Projects</h4>
+                                <h6 class="course__text--sub-heading">Evironmental Standards</h6>
+                            </div>
+                            <div class="course__rating d-flex align-items-center">
+                                <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                 <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                  <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                <p class="course__rating-text">4.7</p>
+                            </div>
+                            <div class="course__status">Ongoing</div>
+                         </td> 
+                         <td class="course__data-card mt-2">
+                            <img src="../../assets/image/user-dashboard/lightbulb.svg" alt="" class="course__data-icon">
+                            <div class="course__text-box">
+                                <h4 class="course__text--heading" id="course-title">Module 5: Developing sustainable capacity</h4>
+                                <h6 class="course__text--sub-heading">Evironmental Standards</h6>
+                            </div>
+                            <div class="course__rating d-flex align-items-center">
+                                <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                 <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                  <img src="../../assets/image/user-dashboard/star.svg" alt="" class="course__rating-star">
+                                <p class="course__rating-text">4.2</p>
+                            </div>
+                            <div class="course__status">Completed</div>
+                         </td> 
+                        </tr>
+                    </table>
+                    </div>
+                    <!-- Student Course Module Body Data Ends -->
+
+                 </div>
+                 <!-- Student Course Module Table Ends -->
+
+                </div>
+                <div class="col-lg-4 col-md-12">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-6 p-lg-0">
+                            <div class="event">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="course__heading">Upcoming Events</h4>        
+                                </div>
+                                <!-- Event Module without Any Data Starts -->
+                                <div class="event__nodata d-flex justify-content-center align-items-center flex-column mt-3">
+                                     <img src="../../assets/image/user-dashboard/event.png" class="event__nodata-img">
+                                     <p class="event__nodata-text">No Upcoming Events</p>
+                                </div>
+                                <!-- Event Module without Any Data Ends -->
+
+                                <!-- Event Module with Data Starts -->
+                                <div class="event__content square scrollbar-dusty-grass square thin g-hidden">
+                                    <div class="event__item mt-2">
+                                        <h4 class="event__item-no">8</h4>
+                                        <div class="event__item-content">
+                                            <h4 class="event__item--heading" id="event__item-title">Social Standard Introduction</h4>
+                                            <p class="event__item--date mt-1">
+                                                <span>8th - 10th July 2021 </span>
+                                                <i class="fas fa-circle font-8 px-1 text-danger"></i> 
+                                                <span>8 A.M - 9 A.M </span> 
+                                            </p>
+                                            <p class="event__item--text mt-2">Google Classroom</p>
+                                        </div>
+                                    </div>
+                                    <div class="event__item mt-2">
+                                        <h4 class="event__item-no">8</h4>
+                                        <div class="event__item-content">
+                                            <h4 class="event__item--heading" id="event__item-title">Social Standard Introduction</h4>
+                                            <p class="event__item--date mt-1">
+                                                <span>8th - 10th July 2021 </span>
+                                                <i class="fas fa-circle font-8 px-1 text-danger"></i> 
+                                                <span>8 A.M - 9 A.M </span> 
+                                            </p>
+                                            <p class="event__item--text mt-2">Google Classroom</p>
+                                        </div>
+                                    </div>
+                                     <div class="event__item mt-2">
+                                        <h4 class="event__item-no">8</h4>
+                                        <div class="event__item-content">
+                                             <h4 class="event__item--heading" id="event__item-title">Social Standard Introduction</h4>
+                                            <p class="event__item--date mt-1">
+                                                <span>8th - 10th July 2021 </span>
+                                                <i class="fas fa-circle font-8 px-1 text-danger"></i> 
+                                                <span>8 A.M - 9 A.M </span> 
+                                            </p>
+                                            <p class="event__item--text mt-2">Google Classroom</p>
+                                        </div>
+                                    </div>
+                                     <div class="event__item mt-2">
+                                        <h4 class="event__item-no">8</h4>
+                                        <div class="event__item-content">
+                                             <h4 class="event__item--heading" id="event__item-title">Social Standard Introduction</h4>
+                                            <p class="event__item--date mt-1">
+                                                <span>8th - 10th July 2021 </span>
+                                                <i class="fas fa-circle font-8 px-1 text-danger"></i> 
+                                                <span>8 A.M - 9 A.M </span> 
+                                            </p>
+                                            <p class="event__item--text mt-2">Google Classroom</p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <!-- Event Module with Data Ends -->
+
+                            </div>
+                        </div>
+                        <div class="col-lg-12 col-md-6 p-lg-0">
+                            <div class="event mt-lg-4 mt-md-0 mt-4">
+                                <div class="d-flex justify-content-between">
+                                    <h4 class="course__heading">Payments History</h4>        
+                                </div>
+                                <div class="payment__content square scrollbar-dusty-grass square thin">
+                                    <div class="payment__item mt-2">
+                                        <p class="payment__title">Procurement M.</p>
+                                        <p class="payment__amount">N150,000</p>
+                                        <i class="fas fa-check-square payment__icon"></i>
+                                    </div>
+                                     <div class="payment__item mt-2">
+                                        <p class="payment__title">Procurement M.</p>
+                                        <p class="payment__amount">N150,000</p>
+                                        <i class="fas fa-check-square payment__icon"></i>
+                                    </div>
+                                     <div class="payment__item mt-2">
+                                        <p class="payment__title">Procurement M.</p>
+                                        <p class="payment__amount">N150,000</p>
+                                        <i class="fas fa-check-square payment__icon"></i>
+                                    </div>
+                                     <div class="payment__item mt-2">
+                                        <p class="payment__title">Procurement M.</p>
+                                        <p class="payment__amount">N150,000</p>
+                                        <i class="fas fa-check-square payment__icon"></i>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+             </div>
+
+              
+              </div>
+            </div>
+          </section>
+        </div>
+      
+      </div>
+    </div>
+    <!-- General JS Scripts -->
+    <script src="../../assets/js/app.min.js"></script>
+    <!-- JS Libraies -->
+    <script src="../../assets/bundles/izitoast/js/iziToast.min.js"></script>
+    <!-- Page Specific JS File -->
+    <script src="../../assets/js/page/toastr.js"></script>
+    <!-- Template JS File -->
+    <script src="../../assets/js/scripts.js"></script>
+    <!-- Custom JS File -->
+    <script src="../../assets/js/custom.js"></script>
+  </body>
+</html>

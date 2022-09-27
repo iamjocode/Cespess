@@ -1,0 +1,11 @@
+.vhdm {
+  min-height: 100vh !important;
+  @include respond(phone) {
+    min-height: 100vh !important;
+  }
+}
+
+.g-hidden {
+  display: none;
+  visibility: hidden;
+}

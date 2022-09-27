@@ -1,0 +1,14 @@
+body {
+  font-family: $main_font;
+}
+
+.heading__primary {
+  &--h6 {
+    font-family: $sub_font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 18px;
+    line-height: 24px;
+    color: #0d0d0d;
+  }
+}

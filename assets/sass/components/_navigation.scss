@@ -1,0 +1,49 @@
+.dark-sidebar .main-sidebar .sidebar-menu li a {
+  color: $color-light-black;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 29px;
+  font-family: $main_font !important;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li a:hover {
+  background-color: $color-secondary;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li.active a {
+  background: linear-gradient(to left, $color-secondary 98%, $color-primary 2%);
+  color: $color-primary;
+}
+.dark-sidebar .main-sidebar .sidebar-menu li a i {
+  font-size: 1.2rem;
+}
+.awesome i {
+  font-size: 1.1rem !important;
+}
+
+#nav__dropdown {
+  color: #3a3434;
+  font-weight: 500;
+  font-size: 0.7rem;
+  line-height: 1.1rem;
+}
+
+.dark-sidebar:not(.sidebar-mini)
+  .sidebar-style-2
+  .sidebar-menu
+  > li.active
+  ul.dropdown-menu
+  li
+  a {
+  background: #fff !important;
+}
+
+.user {
+  &__profile {
+    &-img {
+      height: 30px;
+      width: 30px;
+      object-fit: cover;
+      object-position: center;
+      border-radius: 100%;
+    }
+  }
+}

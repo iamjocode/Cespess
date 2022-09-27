@@ -1,0 +1,143 @@
+.form {
+  &__group {
+    margin-top: 0.7rem;
+
+    span {
+      font-weight: 400;
+      font-size: 0.8rem;
+      line-height: 29px;
+      color: #000000;
+      margin-top: -5px !important;
+    }
+  }
+  &__label {
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 20px;
+    display: block;
+    color: #000000;
+  }
+  &__input {
+    border: 1px solid #cacaca;
+    border-radius: 5px;
+    width: 100%;
+    padding: 0.6rem 0.5rem;
+  }
+  &__submit-btn,
+  &__submit-btn:active {
+    display: block;
+    width: 100%;
+    background: #12a454;
+    border-color: #12a454;
+    text-align: center;
+    padding: 0.5rem 1rem;
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 29px;
+    color: #ffffff;
+    border-radius: 5px;
+    border: 0px !important;
+    cursor: pointer;
+    transition: all ease-out 0.3s;
+
+    &:hover {
+      background: #097238;
+      border-color: #12a454;
+    }
+  }
+  &__title {
+    font-weight: 400;
+    font-size: 1.34rem;
+    line-height: 36px;
+    color: #12a454;
+    margin-top: 1.1rem;
+    margin-bottom: 1.1rem;
+    @include respond(phone) {
+      margin-top: 0.8rem;
+      margin-bottom: 0.5rem;
+      font-size: 1.2rem;
+    }
+  }
+  &__btn-2,
+  &__btn-2:active {
+    width: 60%;
+    margin-left: 20%;
+    margin-right: 20%;
+    margin-top: 2rem;
+
+    @include respond(phone) {
+      width: 76%;
+      margin-left: 12%;
+      margin-right: 12%;
+    }
+  }
+}
+
+.hero {
+  background: linear-gradient(
+      to right,
+      rgba(14, 29, 21, 0.82),
+      rgba(14, 29, 21, 0.82)
+    ),
+    url(../image/global/hero-bg.svg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: top center;
+  padding: 5rem;
+  text-align: center;
+  height: 50vh;
+
+  @include respond(tab-port) {
+    height: 35vh;
+    padding: 2rem;
+  }
+
+  @include respond(phone) {
+    height: 30vh;
+    padding: 1.2rem;
+  }
+
+  &__title {
+    font-family: $sub_font;
+    font-style: normal;
+    font-weight: 800;
+    font-size: 3.5rem;
+    line-height: 73px;
+    text-align: center;
+    color: #ffffff;
+
+    @include respond(tab-port) {
+      font-size: 3rem;
+      line-height: 56px;
+    }
+
+    @include respond(phone) {
+      font-size: 1.8rem;
+      line-height: 36px;
+    }
+  }
+  &__main {
+    background: $color-white;
+    padding: 3rem;
+
+    @include respond(tab-port) {
+      padding: 2rem;
+    }
+
+    @include respond(phone) {
+      padding: 0.8rem;
+    }
+  }
+  &__card {
+    padding: 5rem 7rem;
+    box-shadow: 4px 4px 20px rgba(141, 141, 141, 0.25);
+    border-radius: 6px;
+    @include respond(tab-port) {
+      padding: 3rem 3rem;
+    }
+
+    @include respond(phone) {
+      padding: 2rem 1.5rem;
+    }
+  }
+}
