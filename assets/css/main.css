@@ -230,8 +230,8 @@ a {
 }
 
 .hero {
-  background: -webkit-gradient(linear, left top, right top, from(rgba(14, 29, 21, 0.82)), to(rgba(14, 29, 21, 0.82))), url(../image/global/hero-bg.svg);
-  background: linear-gradient(to right, rgba(14, 29, 21, 0.82), rgba(14, 29, 21, 0.82)), url(../image/global/hero-bg.svg);
+  background: -webkit-gradient(linear, left top, right top, from(rgba(14, 29, 21, 0.82)), to(rgba(14, 29, 21, 0.82))), url(../image/global/hero-bg.png);
+  background: linear-gradient(to right, rgba(14, 29, 21, 0.82), rgba(14, 29, 21, 0.82)), url(../image/global/hero-bg.png);
   background-size: cover;
   background-repeat: no-repeat;
   background-position: top center;
