@@ -343,13 +343,21 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 }
 
 .nav .menu-nav__item.navbar-dropdown .dropdown {
-  display: none;
-  opacity: 0;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  position: relative;
   gap: 1.5rem;
-  top: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-transform: translateY(0px);
           transform: translateY(0px);
   background-color: #fff;
@@ -357,9 +365,9 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
           box-shadow: 0px 10px 10px 3px rgba(0, 0, 0, 0.3);
   border-bottom-left-radius: 3px;
   border-bottom-right-radius: 3px;
-  z-index: 111;
   -webkit-transition: 0.4s all;
   transition: 0.4s all;
+  display: none;
 }
 
 .nav .menu-nav__item.navbar-dropdown .dropdown a {
@@ -375,24 +383,10 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
   color: #12a454;
 }
 
-.nav .menu-nav__item.navbar-dropdown:hover .dropdown {
-  visibility: visible;
+.nav .menu-nav__item.navbar-dropdown .active {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  opacity: 1;
-  -webkit-transform: translateY(0px);
-          transform: translateY(0px);
 }
 
 .nav .menu-nav__link {
@@ -407,6 +401,12 @@ section.account .signup form.signin .form-inner .form-group__input input login.c
 
 .nav .menu-nav__link:hover {
   color: #12a454;
+}
+
+.nav p.menu-nav__list, .nav .attention-wrapper .attention h4.menu-nav__list, .attention-wrapper .attention .nav h4.menu-nav__list,
+.nav .attention-wrapper .attention li.menu-nav__list, .attention-wrapper .attention .nav li.menu-nav__list {
+  font-size: 2.7rem;
+  color: #333333;
 }
 
 .menu-nav__item:nth-child(1) {
@@ -2647,8 +2647,6 @@ footer .footer .newsletter__input-area button {
     position: relative;
   }
   .header__container .nav .menu-nav__item.navbar-dropdown .dropdown {
-    visibility: hidden;
-    opacity: 0;
     position: absolute;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -2669,8 +2667,8 @@ footer .footer .newsletter__input-area button {
     gap: 1.5rem;
     padding: 2rem 1.3rem;
     top: 100%;
-    -webkit-transform: translateY(50px);
-            transform: translateY(50px);
+    -webkit-transform: translateY(20px);
+            transform: translateY(20px);
     left: 0;
     width: 25rem;
     background-color: #fff;
@@ -2682,6 +2680,7 @@ footer .footer .newsletter__input-area button {
     z-index: 111;
     -webkit-transition: 0.4s all;
     transition: 0.4s all;
+    display: none;
   }
   .header__container .nav .menu-nav__item.navbar-dropdown .dropdown a {
     font-family: "Lato", sans-serif;
@@ -2694,9 +2693,10 @@ footer .footer .newsletter__input-area button {
     padding-left: 1rem;
     color: #12a454;
   }
-  .header__container .nav .menu-nav__item.navbar-dropdown:hover .dropdown {
-    visibility: visible;
-    opacity: 1;
+  .header__container .nav .menu-nav__item.navbar-dropdown .active {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     -webkit-transform: translateY(0px);
             transform: translateY(0px);
   }
@@ -2705,7 +2705,7 @@ footer .footer .newsletter__input-area button {
     font-family: "Lato", sans-serif;
     font-weight: 400;
     font-size: 1.5rem;
-    padding: .8rem 1.1rem;
+    padding: 0.8rem 1.1rem;
     -webkit-transition: 0.5s color ease;
     transition: 0.5s color ease;
   }
@@ -3800,4 +3800,47 @@ header > * h2 {
   font-size: 1.5rem;
   color: #12a454;
   cursor: pointer;
+}
+
+.form {
+  padding: 7rem 5rem;
+}
+
+.form .form__group {
+  margin-bottom: 1.6rem;
+}
+
+.form .form__group .form__label2 {
+  display: block;
+  font-weight: 400;
+  font-size: 1.8rem;
+  line-height: 29px;
+  color: #333333;
+  margin-bottom: 0.5rem;
+}
+
+.form .form__group .form__input2 {
+  width: 100%;
+  border-radius: 5px;
+  padding: 1.5rem 1.5rem;
+  border: 1px solid #cacaca;
+  font-size: 1.5rem;
+  line-height: 29px;
+  color: #333333;
+}
+
+.form .form__group .form__text {
+  width: 100%;
+  height: 20rem;
+  border: 1px solid #cacaca;
+  font-size: 1.5rem;
+  line-height: 29px;
+  color: #333333;
+  padding: 0;
+}
+
+@media screen and (max-width: 768px) {
+  .form {
+    padding: 3rem 1rem;
+  }
 }

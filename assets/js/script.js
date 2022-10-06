@@ -1,42 +1,45 @@
-'use strict';
-
-
-
+"use strict";
 
 //Nav menu
-const menuBtn = document.querySelector('.menu-btn');
-const hamburger = document.querySelector('.menu-btn__burger');
-const nav = document.querySelector('.nav');
-const menuNav = document.querySelector('.menu-nav');
-const navItems = document.querySelectorAll('.menu-nav__item');
+const menuBtn = document.querySelector(".menu-btn");
+const hamburger = document.querySelector(".menu-btn__burger");
+const nav = document.querySelector(".nav");
+const menuNav = document.querySelector(".menu-nav");
+const navItems = document.querySelectorAll(".menu-nav__item");
+const navDropdown = document.querySelectorAll("#dropdown");
+const dropdown = document.querySelector(".dropdown");
 
-let showMenu = false;
-
-menuBtn.addEventListener('click', toggleMenu);
+menuBtn.addEventListener("click", toggleMenu);
 
 function toggleMenu() {
-  if (!showMenu) {
-    hamburger.classList.add('open');
-    nav.classList.add('open');
-    menuNav.classList.add('open');
-    navItems.forEach(function (list) {
-      list.classList.add('open');
+  hamburger.classList.toggle("open");
+  nav.classList.toggle("open");
+  menuNav.classList.toggle("open");
+  navItems.forEach(function (list) {
+    list.classList.toggle("open");
+  });
+}
+
+// navDropdown.forEach((cur) => {
+//   cur.addEventListener("click", function () {
+//     dropdown.classList.toggle("dropdown-active");
+//     console.log("hello");
+//   });
+// });
+
+let menu_link = document.querySelectorAll(".navbar-dropdown");
+let dropdownMenu = document.querySelectorAll(".dropdown");
+
+menu_link.forEach((cur, inx) => {
+  cur.addEventListener("click", (event) => {
+    dropdownMenu.forEach((cur, index) => {
+      cur.classList.remove("active");
+      if (inx === index) {
+        cur.classList.add("active");
+      }
     });
-
-    showMenu = true;
-  } else {
-    hamburger.classList.remove('open');
-    nav.classList.remove('open');
-    menuNav.classList.remove('open');
-    navItems.forEach(function (list) {
-      list.classList.remove('open');
-    });
-
-    showMenu = false;
-  }
-};
-
-
+  });
+});
 
 //Hero scripts
 const slideyItems = document.querySelectorAll(".slidey__item");
@@ -65,8 +68,8 @@ const slidey = {
         ease: Back.easeOut,
         stagger: {
           y: 300,
-          each: 0.3
-        }
+          each: 0.3,
+        },
       });
   },
 
@@ -79,15 +82,15 @@ const slidey = {
         left: "100vw",
         delay: 0.5,
         scale: 0.3,
-        opacity: 0
+        opacity: 0,
       })
       .to(texts, 1, {
         autoAlpha: 0,
         ease: Back.easeIn,
         stagger: {
           y: -300,
-          each: 0.3
-        }
+          each: 0.3,
+        },
       })
       .call(slidey.in, [nextIndex], this, "-=1.5")
       .set([texts, slideyItem], { clearProps: "all" });
@@ -107,7 +110,7 @@ const slidey = {
       slidey.currentItem > 0 ? slidey.currentItem - 1 : slideyItems.length - 1;
     slidey.out(slidey.currentItem, prev);
     slidey.currentItem = prev;
-  }
+  },
 };
 
 // Events
@@ -115,18 +118,14 @@ btnNext.addEventListener("click", slidey.next);
 btnBack.addEventListener("click", slidey.back);
 setInterval(slidey.next, 12000);
 
-
 slidey.init();
-
-
-
 
 // Reviews Slider
 const slider = function () {
-  const slides = document.querySelectorAll('.slide');
-  const btnLeft = document.querySelector('.slider__btn--left');
-  const btnRight = document.querySelector('.slider__btn--right');
-  const dotContainer = document.querySelector('.dots');
+  const slides = document.querySelectorAll(".slide");
+  const btnLeft = document.querySelector(".slider__btn--left");
+  const btnRight = document.querySelector(".slider__btn--right");
+  const dotContainer = document.querySelector(".dots");
 
   let curSlide = 0;
   const maxSlide = slides.length;
@@ -135,7 +134,7 @@ const slider = function () {
   const createDots = function () {
     slides.forEach(function (_, i) {
       dotContainer.insertAdjacentHTML(
-        'beforeend',
+        "beforeend",
         `<button class="dots__dot" data-slide="${i}"></button>`
       );
     });
@@ -143,12 +142,12 @@ const slider = function () {
 
   const activateDot = function (slide) {
     document
-      .querySelectorAll('.dots__dot')
-      .forEach(dot => dot.classList.remove('dots__dot--active'));
+      .querySelectorAll(".dots__dot")
+      .forEach((dot) => dot.classList.remove("dots__dot--active"));
 
     document
       .querySelector(`.dots__dot[data-slide="${slide}"]`)
-      .classList.add('dots__dot--active');
+      .classList.add("dots__dot--active");
   };
 
   const goToSlide = function (slide) {
@@ -188,16 +187,16 @@ const slider = function () {
   init();
 
   // Event handlers
-  btnRight.addEventListener('click', nextSlide);
-  btnLeft.addEventListener('click', prevSlide);
+  btnRight.addEventListener("click", nextSlide);
+  btnLeft.addEventListener("click", prevSlide);
 
-  document.addEventListener('keydown', function (e) {
-    if (e.key === 'ArrowLeft') prevSlide();
-    e.key === 'ArrowRight' && nextSlide();
+  document.addEventListener("keydown", function (e) {
+    if (e.key === "ArrowLeft") prevSlide();
+    e.key === "ArrowRight" && nextSlide();
   });
 
-  dotContainer.addEventListener('click', function (e) {
-    if (e.target.classList.contains('dots__dot')) {
+  dotContainer.addEventListener("click", function (e) {
+    if (e.target.classList.contains("dots__dot")) {
       const { slide } = e.target.dataset;
       goToSlide(slide);
       activateDot(slide);
@@ -206,9 +205,10 @@ const slider = function () {
 };
 slider();
 
-
 //SIGN IN / SIGNUP PASSWORD SHOW/HIDE
-const pswrdField = document.querySelector(".form-group__input input[type='password']"),
+const pswrdField = document.querySelector(
+    ".form-group__input input[type='password']"
+  ),
   toggleBtn = document.querySelector(".form-group__input i");
 
 toggleBtn.onclick = () => {
@@ -219,10 +219,4 @@ toggleBtn.onclick = () => {
     pswrdField.type = "password";
     toggleBtn.classList.remove("active");
   }
-}
-
-
-
-
-
-
+};
